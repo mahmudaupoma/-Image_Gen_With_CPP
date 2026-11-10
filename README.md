@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/output.png" width="640" alt="Rendered house scene">
+  <img src="output.png" width="640" alt="Rendered house scene">
 </p>
 
 > The whole scene above — sky, sun, clouds, birds, trees, the house, bushes, fences, road — is built by calling three primitive functions (`drawRectangle`, `drawTriangle`, `drawCircle`) over and over with different coordinates. Nothing is hand-drawn pixel-by-pixel.
@@ -36,7 +36,7 @@
 
 ## Why this exists
 
-This started from a flat clipart-style house illustration (see `assets/reference.jpg`) and the challenge: **recreate it in C or C++, using only small, reusable functions** — a `drawRectangle`, a `drawTriangle`, a `drawCircle`, each taking `(x, y, width, height, rotation, fillColor, lineColor)` — and have `main()` do nothing but call those functions with the coordinates for each object in the picture.
+This started from a flat clipart-style house illustration (see `reference.jpg`) and the challenge: **recreate it in C or C++, using only small, reusable functions** — a `drawRectangle`, a `drawTriangle`, a `drawCircle`, each taking `(x, y, width, height, rotation, fillColor, lineColor)` — and have `main()` do nothing but call those functions with the coordinates for each object in the picture.
 
 No `graphics.h` / BGI setup required — it rasterizes everything into an in-memory pixel buffer by hand, then:
 1. prints it straight into your terminal as colored blocks, and
@@ -44,8 +44,8 @@ No `graphics.h` / BGI setup required — it rasterizes everything into an in-mem
 
 <table>
 <tr>
-<td align="center"><b>Reference image</b><br><img src="assets/reference.jpg" width="320"></td>
-<td align="center"><b>This program's output</b><br><img src="assets/output.png" width="320"></td>
+<td align="center"><b>Reference image</b><br><img src="reference.jpg" width="320"></td>
+<td align="center"><b>This program's output</b><br><img src="output.png" width="320"></td>
 </tr>
 </table>
 
@@ -88,7 +88,7 @@ Type `y` and hit Enter.
 The program draws the scene **twice**: once as colored blocks directly in your terminal (resolution depends on how many columns you ask for), and once at full resolution saved to `house.bmp`.
 
 <p align="center">
-  <img src="assets/terminal-preview.png" width="600" alt="Terminal block-art preview"><br>
+  <img src="terminal-preview.png" width="600" alt="Terminal block-art preview"><br>
   <sub>Preview of the terminal block-art rendering (80 columns). Actual colors depend on your terminal's truecolor support — classic Windows <code>cmd.exe</code> and PowerShell both work on Windows 10/11.</sub>
 </p>
 
